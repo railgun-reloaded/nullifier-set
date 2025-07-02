@@ -6,6 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {
+    "@railgun-reloaded/eslint-config": "^1.1.0",
+    "@railgun-reloaded/tsconfig": "^1.2.0",
+    "@types/node": "^24.0.3",
+    "dotenv": "^16.5.0",
+    "eslint": "^9.29.0",
+    "typescript": "^5.8.3"
+  },
   "author": "",
   "license": "ISC"
 }
