@@ -2,8 +2,6 @@ import { RPCProvider } from 'fafo-scanner'
 import type { EVMBlock } from 'fafo-scanner/src/models'
 import { Nullifier } from './model'
 
-
-// TODO: This are not final, revisit later
 const RAILGUN_DEPLOYMENT_BLOCK = 14737691n
 const FIXED_END_BLOCK = RAILGUN_DEPLOYMENT_BLOCK + 10000n
 const FIXED_CHUNK_SIZE = 499n
@@ -11,7 +9,7 @@ const FIXED_CHUNK_SIZE = 499n
 export class NullifiersIndexer {
  #scanner: RPCProvider<EVMBlock>
  #latestBlock: bigint | null
- #set: Map<string, Nullifier> // todo: check performance map vs set for this
+ #set: Map<string, Nullifier>
 
  constructor(scanner: RPCProvider<EVMBlock>) {
    this.#scanner = scanner
