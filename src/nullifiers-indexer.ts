@@ -33,6 +33,7 @@ export class NullifiersIndexer {
 
    for await (const blockData of blockIterator) {
      console.log(`Processing block ${blockData.number}`)
+     this.#latestBlock = blockData.number
    }
  }
 
@@ -50,5 +51,9 @@ export class NullifiersIndexer {
 
  public exists(id: string): boolean {
    return this.#set.has(id)
+ }
+
+ public get latestBlock(): bigint | null {
+   return this.#latestBlock
  }
 }

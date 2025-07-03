@@ -4,3 +4,4 @@ package-lock.json
 tsbuild.config
 misc.md
 *.js
+tsconfig.tsbuildinfo
