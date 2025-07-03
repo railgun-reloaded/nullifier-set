@@ -4,12 +4,12 @@
   "description": "Nullifier set",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc --build",
     "clean": "tsc --build --clean",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
-    "prepare": "npm run generate && npm run build"
+    "pretest": "npm run build",
+    "test": "node --test --enable-source-maps test/*.js"
   },
   "dependencies": {
     "@railgun-reloaded/eslint-config": "^1.1.0",
