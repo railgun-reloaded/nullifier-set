@@ -4,7 +4,12 @@
   "description": "Nullifier set",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "prepare": "npm run generate && npm run build"
   },
   "dependencies": {
     "@railgun-reloaded/eslint-config": "^1.1.0",
@@ -12,7 +17,8 @@
     "@types/node": "^24.0.3",
     "dotenv": "^16.5.0",
     "eslint": "^9.29.0",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "fafo-scanner": "file:../fafo-scanner"
   },
   "author": "",
   "license": "ISC"
